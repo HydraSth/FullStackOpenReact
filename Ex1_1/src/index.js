@@ -6,19 +6,24 @@ const Header = (obj)=>{
     <h1>{obj.course}</h1>
   )
 }
-const Content = (obj)=>{
+
+const Part = (obj)=>{
   return(
     <>
       <p>
-      {obj.part1} {obj.exercises1}
-      </p>
-      <p>
-        {obj.part2} {obj.exercises2}
-      </p>
-      <p>
-        {obj.part3} {obj.exercises3}
+        {obj.part} {obj.exercises}
       </p>
     </>
+  )
+}
+
+const Content = (obj)=>{
+  return(
+  <>
+    <Part part={obj.part1} exercises={obj.exercises1}/>
+    <Part part={obj.part2} exercises={obj.exercises2}/>
+    <Part part={obj.part3} exercises={obj.exercises3}/>
+  </>
   )
 }
 const Total = (obj)=>{
